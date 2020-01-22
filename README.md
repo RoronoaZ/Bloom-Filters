@@ -30,7 +30,7 @@ The answer for element 254788 is: 0
 First, you have to select which script you want to compile, the simple Bloom filter or its parallelized version, 
 then all you have to do is to run the command ```make```
 ### Running it
-./bloom-filter
+```./bloom-filter```
 
 ## Parallelized Bloom filter
 The **OpenMP** C++ library is used in this project to implement the parallelized Bloom filter. You can change the number of the 
@@ -39,6 +39,8 @@ For building the project in the parallelized verions, make sure to comment the s
 one.
 
 ### Running it
+```
 ./par-bloom-filter [set size][number of distinct items][epsilon][delta][No threads][Zipf dist(Normal/Uniform)][Zipf degree][Bloom filter=1]
+```
 Example: ./par-bloom-filter 28 18 0.01 0.003 8 1 1.1 1
 (Note: it the running scheme will be discared in further modificaitons)
