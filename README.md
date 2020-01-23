@@ -32,7 +32,7 @@ The answer for element 1235 is: 1
 The answer for element 254788 is: 0
 ```
 
-## Building the project
+### Build
 First, you have to select which script you want to compile, the simple Bloom filter or its parallelized version, 
 then all you have to do is to run the command ```make```
 ### Running it
