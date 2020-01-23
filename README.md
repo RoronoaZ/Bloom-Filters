@@ -52,4 +52,10 @@ Example: ```./par-bloom-filter 28 18 0.01 0.003 8 1 1.1 1 ```
 (Note: it the running scheme will be discared in further modificaitons)
 
 ## Counting Bloom filter
-It is known that the *Counting Bloom filter (CBF)* has the property of using counters instead of bits in the *Standard Bloom filter* in order to support item deletion from the filter by decrementing the corresponding counters and returning the counter with the minimum value while querying the exisitence of an item. 
+It is known that the *Counting Bloom filter (CBF)* has the property of using counters instead of bits in the *Standard Bloom filter* in order to support item deletion from the filter by decrementing the corresponding counters and returning the counter with the minimum value while querying the existence of an item. 
+### Build
+Follow the same previous procedure of uncommenting the compiling part of the *CBF* in ```Makefile```.
+### Running it
+```
+./countingBF
+```
