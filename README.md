@@ -4,6 +4,7 @@ It also includes a parallelized implementation of the Bloom filter using *OpenMP
 
 ## Standard Bloom filter (Example)
 The elements insertion process is demonstarted in the following animation, in Bloom filter, there are two main operations, the insertion and the querying, for the *deletion* operation, there are many Bloom filter variants that perform it. 
+In the example below, we suppose that number of the hash functions used is *k=2*, and the data stream contains alphabetical characters as a small demonstration. 
 <p align="center">
 <img align="center" width="600" height="193" src="https://github.com/RoronoaZ/Bloom-Filters/blob/master/bloom-filter.gif">
 </p>
@@ -49,3 +50,12 @@ one.
 ```
 Example: ```./par-bloom-filter 28 18 0.01 0.003 8 1 1.1 1 ```
 (Note: it the running scheme will be discared in further modificaitons)
+
+## Counting Bloom filter
+It is known that the *Counting Bloom filter (CBF)* has the property of using counters instead of bits in the *Standard Bloom filter* in order to support item deletion from the filter by decrementing the corresponding counters and returning the counter with the minimum value while querying the existence of an item. 
+### Build
+Follow the same previous procedure of uncommenting the compiling part of the *CBF* in ```Makefile```.
+### Running it
+```
+./countingBF
+```
