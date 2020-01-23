@@ -3,8 +3,10 @@ This project is the implementation of several Bloom filter variants starting fro
 It also includes a parallelized implementation of the Bloom filter using *OpenMP*.
 
 ## Standard Bloom filter (Example)
+<p align="center">
+<img align="center" width="600" height="193" src="https://github.com/RoronoaZ/Bloom-Filters/blob/master/bloom-filter.gif">
+</p>
 
-![alt text](https://github.com/RoronoaZ/Bloom-Filters/blob/master/bloom-filter.gif)
 ```C++
 double fpp = 0.03;
 uint32_t n =  (1 << 10);
