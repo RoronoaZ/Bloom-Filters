@@ -3,6 +3,7 @@ This project is the implementation of several Bloom filter variants starting fro
 It also includes a parallelized implementation of the Bloom filter using *OpenMP*.
 
 ## Standard Bloom filter (Example)
+The elements insertion process is demonstarted in the following animation, in Bloom filter, there are two main operations, the insertion and the querying, for the *deletion* operation, there are many Bloom filter variants that perform it. 
 <p align="center">
 <img align="center" width="600" height="193" src="https://github.com/RoronoaZ/Bloom-Filters/blob/master/bloom-filter.gif">
 </p>
@@ -46,5 +47,5 @@ one.
 ```
 ./par-bloom-filter [set size][number of distinct items][epsilon][delta][No threads][Zipf dist(Normal/Uniform)][Zipf degree][Bloom filter=1]
 ```
-Example: ./par-bloom-filter 28 18 0.01 0.003 8 1 1.1 1
+Example: ```./par-bloom-filter 28 18 0.01 0.003 8 1 1.1 1 ```
 (Note: it the running scheme will be discared in further modificaitons)
