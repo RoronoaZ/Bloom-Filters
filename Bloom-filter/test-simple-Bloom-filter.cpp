@@ -32,9 +32,9 @@ int main(int argc, char** argv){
 
 	cout << "Testing for elements of type uint32_t" << endl;
 	cout << "-------------------------------------" << endl;
-	bloom_filter_uint.insert(&e, 128);
-	cout << "The answer for element " << e << " is: " << bloom_filter_uint.query(&e, 128) << endl;
-	cout << "The answer for element " << test << " is: " << bloom_filter_uint.query(&test, 128) << endl;
+	bloom_filter_uint.insert(&e, 32);
+	cout << "The answer for element " << e << " is: " << bloom_filter_uint.query(&e, 32) << endl;
+	cout << "The answer for element " << test << " is: " << bloom_filter_uint.query(&test, 32) << endl;
 
 	cout << "--------------------------------------------------------------------------" << endl;
 
