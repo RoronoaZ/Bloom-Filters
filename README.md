@@ -59,3 +59,6 @@ Follow the same previous procedure of uncommenting the compiling part of the *CB
 ```
 ./countingBF
 ```
+
+## Spectral Bloom filter
+
