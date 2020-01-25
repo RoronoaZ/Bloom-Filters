@@ -28,10 +28,25 @@ int main(int argc, char** argv){
 	cbf.insert(&item, 32);
 	cbf.insert(&item, 32);
 	cbf.insert(&item, 32);
-	uint32_t q_result = cbf.query(&item, 32);
+	uint32_t q_result = cbf.query(&item, 32, cbf.get_bit_vector());
 	if (q_result == 0)
-		cout << "The item " << item << " does not exist and query result is: " << cbf.query(&item, 32) << endl;
+		cout << "The item " << item << " does not exist and query result is: " << cbf.query(&item, 32, cbf.get_bit_vector()) << endl;
 	else
-		cout << "The item " << item << " exists and query result is: " << cbf.query(&item, 32) << endl;
+		cout << "The item " << item << " exists and query result is: " << cbf.query(&item, 32, cbf.get_bit_vector()) << endl;
 
+	Spectral_BF_MI<uint32_t> sbf(size, num_hash, fpp);
+	uint32_t item2 = 44;
+	uint16_t query_res = sbf.Query(&item, 32, sbf.get_bit_vector());
+
+	sbf.insert(&item, 32);
+	query_res = sbf.Query(&item, 32, sbf.get_bit_vector());
+	sbf.insert(&item, 32);
+	sbf.insert(&item, 32);
+
+	cout << "Testing the Spectral BF" << endl;
+	cout << "Query result for item " << item << " is: " << query_res << endl;
+	sbf.insert(&item, 32);
+
+	query_res = sbf.Query(&item, 32, sbf.get_bit_vector());
+	cout << "Query result for item " << item << " is: " << query_res << endl;
 }
