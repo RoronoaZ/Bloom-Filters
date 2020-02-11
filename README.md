@@ -61,4 +61,27 @@ Follow the same previous procedure of uncommenting the compiling part of the *CB
 ```
 
 ## Spectral Bloom filter
+The *Spectral Bloom filter (SBF)* is quite similar to the (CBF) structure with a change in the way of incrementing the filter counters, SBF increments only the minimum i<sup>th</sup> counters in order to minimize the rate of false positives.
+Example: 
 
+```C++
+Spectral_BF_MI<uint32_t> sbf(size, num_hash, fpp);
+uint32_t item2 = 44;
+uint16_t query_res = sbf.Query(&item, 32, sbf.get_bit_vector());
+
+sbf.insert(&item2, 32);
+query_res = sbf.Query(&item, 32, sbf.get_bit_vector());
+sbf.insert(&item2, 32);
+sbf.insert(&item2, 32);
+
+cout << "Testing the Spectral BF" << endl;
+cout << "Query result for item " << item << " is: " << query_res << endl;
+sbf.insert(&item, 32);
+
+query_res = sbf.Query(&item, 32, sbf.get_bit_vector());
+cout << "Query result for item " << item << " is: " << query_res << endl;
+```
+The result of the previous code:
+```
+
+```
